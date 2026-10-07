@@ -1,6 +1,6 @@
 import requests
 
-#PArt 1: Create a user using POST request
+#Part 1: Create a user using POST request
 # Example of a POST with Authorization Bearer request with custom headers
 request_headers = {
     'Accept': 'text/plain',
@@ -10,7 +10,7 @@ request_headers = {
 
 reqest_body = {
     "name": "Prof. Atreyee Naik",
-    "email": "naik_prof_atreyee111555@zulauf.test",
+    "email": "naik_prof_atreyee111556@zulauf.test",
     "gender": "male",
     "status": "inactive"
 }
