@@ -40,3 +40,18 @@ jobs:
         with:
           name: test-report
           path: ./reports/report*.html
+  
+  build-image:
+    needs: run-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: |
+          docker build -t my-api-integration-test-image .
+
+      - name: Push Docker image to Docker Hub
+        run: |
+          docker run my-api-integration-test-image
